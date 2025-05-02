@@ -413,3 +413,101 @@ section {
   border-radius: 4px;
   margin-right: 1rem;
 }
+
+/*-------Responsive------------*/
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .app-name {
+    font-size: 1.5rem;
+  }
+
+  .header-actions {
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .task-input-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .add-task-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .task-input-text {
+    width: 100%;
+  }
+
+  .date-preview {
+    margin-left: 0;
+  }
+
+  .task-date-selector {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .filters button {
+    width: 100%;
+  }
+
+  .week-label-calendar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .week-view {
+    flex-direction: column;
+    height: auto;
+    padding: 0 1rem;
+  }
+
+  .day-column {
+    min-width: auto;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-item span {
+    margin: 0.5rem 0;
+  }
+
+  .task-item button {
+    font-size: 1rem;
+  }
+}
