@@ -7,14 +7,10 @@ const TaskItem = ({ task }) => {
 
   let taskClass = 'task-item';
   if (completed) taskClass += ' completed';
-  if (important) taskClass += ' important';
+  if (important) taskClass += ' important bg-yellow-100 border-l-4 border-yellow-500';
   if (overdue) taskClass += ' overdue';
 
-  return (
-    <li className={taskClass}>
-      {truncatedText}
-    </li>
-  );
+  return <li className={taskClass}>{truncatedText}</li>;
 };
 
 export default TaskItem;

@@ -1,15 +1,8 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html, body, #root {
-  height: 100%;
-  width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #6db8d6;
-background: linear-gradient(45deg,rgba(109, 184, 214, 1) 0%, rgba(71, 186, 201, 1) 32%, rgba(47, 224, 207, 1) 72%);
+/* Opcional: puedes resetear padding y margen si lo deseas */
+body {
+  @apply bg-gray-50 text-gray-800;
 }
